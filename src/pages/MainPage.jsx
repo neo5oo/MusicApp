@@ -1,5 +1,6 @@
 import tracksList from "../assets/tracksList";
 import style from "./mainPage.module.scss";
+import Track from "../components/Track";
 
 const MainPage = () => {
   return (
@@ -7,7 +8,7 @@ const MainPage = () => {
       <>Поиск треков</>
       <div className={style.list}>
         {tracksList.map((track) => (
-          <div>{JSON.stringify(track)}</div>
+          <Track key={track.id} {...track} />
         ))}
       </div>
     </div>
