@@ -1,7 +1,7 @@
 import { useState } from "react";
 import tracksList from "../assets/tracksList";
 import style from "./mainPage.module.scss";
-import Track from "../components/Track";
+import Track from "../components/Track/Track";
 import { Input } from "@mui/material";
 
 const runSearch = (query) => {

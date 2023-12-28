@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import { AudioContext } from "../context/AudioContext";
+import { AudioContext } from "../../context/AudioContext";
 import style from "./track.module.scss";
 import { IconButton } from "@mui/material";
 import { PlayArrow, Pause } from "@mui/icons-material";
-import secondsToMMSS from "../utils/secondsToMMSS";
+import secondsToMMSS from "../../utils/secondsToMMSS";
 import className from "classnames";
 
 const Track = (track) => {
-  const { id, src, preview, title, artists, duration } = track;
+  const { preview, title, artists, duration } = track;
 
   const { handleToggleAudio, currentTrack, isPlaying } =
     useContext(AudioContext);
